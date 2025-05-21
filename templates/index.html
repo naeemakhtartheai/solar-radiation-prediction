@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Radiation Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🌞 Solar Radiation Prediction</h1>
+        <form id="prediction-form" class="form-card">
+            <h2>Prediction Input</h2>
+            <div class="form-group">
+                <label for="UNIXTime">UNIX Time</label>
+                <input type="text" id="UNIXTime" name="UNIXTime">
+            </div>
+            <div class="form-group">
+                <label for="Temperature">Temperature</label>
+                <input type="text" id="Temperature" name="Temperature">
+            </div>
+            <div class="form-group">
+                <label for="Pressure">Pressure</label>
+                <input type="text" id="Pressure" name="Pressure">
+            </div>
+            <div class="form-group">
+                <label for="Humidity">Humidity</label>
+                <input type="text" id="Humidity" name="Humidity">
+            </div>
+            <div class="form-group">
+                <label for="WindDirection">Wind Direction (°)</label>
+                <input type="text" id="WindDirection" name="WindDirection">
+            </div>
+            <div class="form-group">
+                <label for="Speed">Speed</label>
+                <input type="text" id="Speed" name="Speed">
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <p id="result" class="result-output"></p>
+
+        <form action="{{ url_for('forecast_view') }}" method="post" class="form-card">
+            <h2>📅 Forecast Generator</h2>
+            <div class="form-group">
+                <label for="start_date">Start Date</label>
+                <input type="date" id="start_date" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label for="end_date">End Date</label>
+                <input type="date" id="end_date" name="end_date" required>
+            </div>
+            <button type="submit" class="btn">Generate Forecast</button>
+        </form>
+    </div>
+</body>
+</html>

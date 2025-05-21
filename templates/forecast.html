@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecast Graph</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Forecast Graph</h1>
+        <div class="graph-container">
+            <img src="data:image/png;base64,{{ graph }}" alt="Forecast Graph">
+        </div>
+        <div class="back-link">
+            <a href="{{ url_for('index') }}" class="btn">← Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
