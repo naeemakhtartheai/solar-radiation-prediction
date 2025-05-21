@@ -31,16 +31,12 @@ This is a Flask-based web application that provides two core functionalities:
    cd weather-forecast-app
 Create and activate a virtual environment:
 
-bash
-Copy
-Edit
+
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install dependencies:
 
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
 Ensure the following model files are present:
 
@@ -50,15 +46,11 @@ prophet_model.pkl – your trained Prophet time-series model
 
 Run the app:
 
-bash
-Copy
-Edit
+
 python app.py
 Open your browser and go to:
 
-cpp
-Copy
-Edit
+
 http://127.0.0.1:5000/
 📈 Predict API
 Endpoint
@@ -96,9 +88,7 @@ Output
 Forecast trend graph rendered as an image
 
 📁 Project Structure
-csharp
-Copy
-Edit
+
 weather-forecast-app/
 │
 ├── templates/
